@@ -47,6 +47,14 @@ Real-time visuals, lighting, music, and the moments when separate elements becom
 ---
 
 <p align="center">
+  <sub>Support the next experiment.</sub>
+  <br /><br />
+  <a href="https://buymeacoffee.com/etleli">
+    ☕ Buy me a coffee
+  </a>
+</p>
+
+<p align="center">
   <a href="https://github.com/etleli">GitHub</a>
   &nbsp; / &nbsp;
   <a href="https://www.npmjs.com/~etleli">npm</a>
