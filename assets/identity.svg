@@ -1,10 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="1200" height="260" viewBox="0 0 1200 260"
+     width="100%" height="260"
      role="img" aria-labelledby="title description">
   <title id="title">Elias Etl</title>
-  <desc id="description">A dark title strip with green and violet light frames and a travelling signal.</desc>
+  <desc id="description">A responsive dark title strip with green and violet light frames, the words code, light and sound, and a travelling signal.</desc>
 
-  <foreignObject x="0" y="0" width="1200" height="260">
+  <!-- No fixed-width viewBox: the layout uses the actual image width instead
+       of scaling a 1200px desktop canvas down to an unreadable mobile strip.
+       Keep the README image at width="100%", without a fixed image height. -->
+  <foreignObject x="0" y="0" width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml" class="hero">
       <style>
         * { box-sizing: border-box; }
@@ -12,9 +15,12 @@
         .hero {
           --green: #b1f184;
           --violet: #b49aff;
+          --edge: clamp(24px, 4.8333vw, 58px);
+          --sculpture-width: clamp(148px, 20.3333vw, 244px);
+          --signal-width: clamp(80px, 18.3333vw, 220px);
           position: relative;
-          width: 1200px;
-          height: 260px;
+          width: 100%;
+          height: 100%;
           overflow: hidden;
           border: 1px solid #28312d;
           border-radius: 16px;
@@ -35,70 +41,79 @@
           background-size: 24px 24px;
         }
 
-        .name {
+        .identity {
           position: absolute;
-          top: 58px;
-          left: 58px;
+          top: 50%;
+          left: var(--edge);
+          right: calc(var(--edge) + var(--sculpture-width) + 32px);
+          min-width: 0;
+          transform: translateY(-50%);
+        }
+
+        .name {
           margin: 0;
-          font-size: 98px;
+          font-size: clamp(36px, 8.1667vw, 98px);
           font-weight: 500;
           line-height: 1.15;
-          letter-spacing: 12px;
+          letter-spacing: clamp(4px, 1vw, 12px);
+          white-space: nowrap;
         }
 
         .signature {
-          position: absolute;
-          top: 184px;
-          left: 64px;
+          margin-top: 18px;
           color: #bdc5bc;
-          font: 18px / 1.4 monospace;
-          letter-spacing: 5px;
+          font-family: monospace;
+          font-size: clamp(12px, 1.5vw, 18px);
+          line-height: 1.4;
+          letter-spacing: clamp(1.4px, .4167vw, 5px);
+          white-space: nowrap;
         }
 
         .sculpture {
           position: absolute;
-          top: 18px;
-          right: 54px;
-          width: 244px;
-          height: 216px;
+          top: 50%;
+          right: var(--edge);
+          width: var(--sculpture-width);
+          aspect-ratio: 244 / 216;
+          transform: translateY(-50%);
         }
 
         .frame {
           position: absolute;
-          width: 116px;
-          height: 116px;
+          width: 47.541%;
+          height: 53.704%;
           border: 1px solid;
           border-radius: 3px;
           transform: rotate(-35deg) skew(7deg, 7deg);
         }
 
         .frame-one {
-          top: 48px;
-          left: 18px;
+          top: 22.222%;
+          left: 7.377%;
           color: var(--green);
           box-shadow: 0 0 24px #b1f18418, inset 0 0 18px #b1f1840b;
           animation: illuminate 4.8s ease-in-out infinite;
         }
 
         .frame-two {
-          top: 36px;
-          left: 58px;
+          top: 16.667%;
+          left: 23.770%;
           color: #d9dfd3;
           opacity: .42;
         }
 
         .frame-three {
-          top: 24px;
-          left: 98px;
+          top: 11.111%;
+          left: 40.164%;
           color: var(--violet);
           box-shadow: 0 0 24px #b49aff18, inset 0 0 18px #b49aff0b;
         }
 
         .signal {
           position: absolute;
-          right: 60px;
+          right: var(--edge);
           bottom: 20px;
-          left: 60px;
+          left: var(--edge);
           height: 2px;
           overflow: hidden;
           background: #263029;
@@ -108,28 +123,24 @@
           content: "";
           position: absolute;
           inset: 0;
-          /* Fill the track so translateX(100%) clears its entire width.
-             Only the first 220px contain the coloured light. */
           background-image: linear-gradient(90deg, transparent, var(--green), var(--violet), transparent);
-          background-size: 220px 100%;
+          background-size: var(--signal-width) 100%;
           background-repeat: no-repeat;
-          transform: translateX(860px);
+          transform: translateX(calc(0px - var(--signal-width)));
+          opacity: 0;
           animation: transmit 4.8s linear infinite;
         }
 
         @keyframes transmit {
           0% {
-            transform: translateX(-220px);
+            transform: translateX(calc(0px - var(--signal-width)));
             opacity: 0;
           }
-          8% {
+          8%, 62% {
             opacity: 1;
           }
-          62% {
-            opacity: 1;
-          }
-          /* Fade out while exiting; wait invisibly for the final 20%.
-             Both sides of the loop boundary have opacity: 0. */
+          /* Leave the complete track, fade out, and wait invisibly.
+             The last 20% is the same 0.96-second pause as before. */
           80%, 100% {
             transform: translateX(100%);
             opacity: 0;
@@ -142,13 +153,55 @@
           70% { opacity: 1; box-shadow: 0 0 32px #b1f18444; }
         }
 
+        /* SVG media queries use the image's available width, so this also
+           works in a narrow profile column on a wider browser window. */
+        @media (max-width: 600px) {
+          .hero {
+            --edge: 20px;
+            --sculpture-width: 154px;
+          }
+
+          .identity {
+            top: auto;
+            bottom: 44px;
+            left: var(--edge);
+            right: var(--edge);
+            text-align: center;
+            transform: none;
+          }
+
+          .name {
+            font-size: clamp(26px, 10.8vw, 48px);
+            letter-spacing: clamp(2px, 1vw, 4.8px);
+          }
+
+          .signature {
+            margin-top: 12px;
+            font-size: clamp(11px, 3vw, 13px);
+            letter-spacing: clamp(1.2px, .6vw, 2.4px);
+          }
+
+          .sculpture {
+            top: 4px;
+            right: 50%;
+            transform: translateX(50%);
+          }
+        }
+
         @media (prefers-reduced-motion: reduce) {
           .frame-one, .signal::after { animation: none; }
+          .signal::after {
+            transform: none;
+            opacity: 1;
+            background-position: center;
+          }
         }
       </style>
 
-      <h1 class="name">ELIAS ETL</h1>
-      <div class="signature">CODE / LIGHT / SOUND</div>
+      <div class="identity">
+        <h1 class="name">ELIAS ETL</h1>
+        <div class="signature">CODE / LIGHT / SOUND</div>
+      </div>
 
       <div class="sculpture" aria-hidden="true">
         <div class="frame frame-one"></div>
