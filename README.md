@@ -46,13 +46,7 @@ Real-time visuals, lighting, music, and the moments when separate elements becom
 
 ---
 
-<p align="center">
-  <sub>Support the next experiment.</sub>
-  <br /><br />
-  <a href="https://buymeacoffee.com/etleli">
-    ☕ Buy me a coffee
-  </a>
-</p>
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="etleli" data-color="#5F7FFF" data-emoji="☕"  data-font="Lato" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
 
 <p align="center">
   <a href="https://github.com/etleli">GitHub</a>
