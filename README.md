@@ -1,113 +1,53 @@
-<div align="center">
+<p align="center">
+  <img src="./assets/identity.svg" alt="Elias Etl — code, light and sound" width="100%" />
+</p>
 
-<img src="./assets/header.jpg" alt="Elias Etl during a live light show event" width="100%" />
+<p align="center">
+  <strong>Somewhere between logic and instinct.</strong><br />
+  <sub>Software engineering · Interactive systems · Creative technology</sub>
+</p>
 
-<div align="center">
-  <sub>live visuals / lighting / control / software</sub>
-</div>
+<br />
 
-<br/>
-<br/>
+<p align="center">
+  <img src="./assets/header.jpg" alt="Behind the scenes at a live light show: two operators working with visual and lighting controls." width="100%" />
+  <br />
+  <sub>Behind the scenes. Where code becomes an experience.</sub>
+</p>
 
-# Elias Etl
+<br />
 
-### somewhere between logic and instinct
+## From an idea to something real
 
-*software engineer · interactive systems · light & sound*
+I’m Elias. I build things where **code, design, and the physical world** meet.
 
-</div>
+Sometimes that means software, interfaces, and reusable tools. Sometimes it
+means programming a controller, shaping a visual, or making a space respond
+to music.
 
----
+I enjoy understanding how a system works — and deciding how it should feel.
 
-## about
+## What draws me in
 
-I build things where **code, design, and the physical world** meet.
+**Software & interfaces**  
+Clear interactions, useful tools, and systems that make complex things approachable.
 
-Sometimes that means building software, interfaces, and reusable tools.  
-Sometimes it means programming controllers, shaping visuals, or making a space respond to light and sound.
+**Hardware & control**  
+Electronics, embedded systems, and getting software to do something in the real world.
 
-I enjoy both sides of the process:
+**Light & sound**  
+Real-time visuals, lighting, music, and the moments when separate elements become one experience.
 
-- understanding how a system works
-- designing how it should feel
-- turning technical complexity into something usable, expressive, and real
+## Tools I reach for
 
----
+`Python` · `TypeScript / JavaScript` · `React` · `C++`
 
-## current focus
-
-Right now I’m working on:
-
-- **reusable UI systems**
-- **developer tools**
-- **interactive visual systems**
-- **LED / lighting control**
-- **creative technology experiments**
-
-I like projects that sit at the intersection of:
-
-**software · hardware · visuals · music**
+`TouchDesigner` · `Blender` · `Embedded development`
 
 ---
 
-## selected direction
-
-### Agentic UI
-
-A React and TypeScript component library with a visual workshop for exploring components, adjusting themes, and testing interactions.
-
-Built around reusable components, clear interaction contracts, and tooling that is useful for both developers and coding agents.
-
-*Currently preparing its first independent public release.*
-
----
-
-## beyond the screen
-
-A lot of my work also lives outside traditional software products.
-
-That includes things like:
-
-- LED controllers
-- event-lighting tools
-- real-time visual systems
-- interactive setups
-- experiments that connect software to physical environments
-
-This is the part I especially enjoy:  
-when an idea moves beyond the screen and starts becoming an experience.
-
----
-
-## technologies
-
-**software**  
-`C# / .NET` · `Python` · `TypeScript / React` · `C++`
-
-**creative / technical tools**  
-`TouchDesigner` · `Blender` · `Embedded Development`
-
-**systems / real-world stuff**  
-`LED Systems` · `Creative Coding` · `Interactive Installations`
-
----
-
-## philosophy
-
-I like building things that are both:
-
-- **structured**
-- **expressive**
-
-Reliable enough to work.  
-Open enough to experiment.
-
----
-
-<div align="center">
-
-### Code meets the physical world.
-
-`GitHub: @etleli` · `npm: @etleli`
-
-</div>
+<p align="center">
+  <a href="https://github.com/etleli">GitHub</a>
+  &nbsp; / &nbsp;
+  <a href="https://www.npmjs.com/~etleli">npm</a>
+</p>
