@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="260" viewBox="0 0 1200 260"
+     role="img" aria-labelledby="title description">
+  <title id="title">Elias Etl</title>
+  <desc id="description">A dark title strip with green and violet light frames and a travelling signal.</desc>
+
+  <foreignObject x="0" y="0" width="1200" height="260">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="hero">
+      <style>
+        * { box-sizing: border-box; }
+
+        .hero {
+          --green: #b1f184;
+          --violet: #b49aff;
+          position: relative;
+          width: 1200px;
+          height: 260px;
+          overflow: hidden;
+          border: 1px solid #28312d;
+          border-radius: 16px;
+          color: #f0f2ef;
+          background:
+            radial-gradient(ellipse at 85% 40%, #332b4533, transparent 45%),
+            radial-gradient(ellipse at 65% 100%, #32412644, transparent 50%),
+            #0c100f;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .hero::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          opacity: .28;
+          background-image: radial-gradient(#657065 1px, transparent 1px);
+          background-size: 24px 24px;
+        }
+
+        .name {
+          position: absolute;
+          top: 58px;
+          left: 58px;
+          margin: 0;
+          font-size: 98px;
+          font-weight: 500;
+          line-height: 1.15;
+          letter-spacing: 12px;
+        }
+
+        .signature {
+          position: absolute;
+          top: 184px;
+          left: 64px;
+          color: #bdc5bc;
+          font: 18px / 1.4 monospace;
+          letter-spacing: 5px;
+        }
+
+        .sculpture {
+          position: absolute;
+          top: 18px;
+          right: 54px;
+          width: 244px;
+          height: 216px;
+        }
+
+        .frame {
+          position: absolute;
+          width: 116px;
+          height: 116px;
+          border: 1px solid;
+          border-radius: 3px;
+          transform: rotate(-35deg) skew(7deg, 7deg);
+        }
+
+        .frame-one {
+          top: 48px;
+          left: 18px;
+          color: var(--green);
+          box-shadow: 0 0 24px #b1f18418, inset 0 0 18px #b1f1840b;
+          animation: illuminate 4.8s ease-in-out 1;
+        }
+
+        .frame-two {
+          top: 36px;
+          left: 58px;
+          color: #d9dfd3;
+          opacity: .42;
+        }
+
+        .frame-three {
+          top: 24px;
+          left: 98px;
+          color: var(--violet);
+          box-shadow: 0 0 24px #b49aff18, inset 0 0 18px #b49aff0b;
+        }
+
+        .signal {
+          position: absolute;
+          right: 60px;
+          bottom: 20px;
+          left: 60px;
+          height: 2px;
+          overflow: hidden;
+          background: #263029;
+        }
+
+        .signal::after {
+          content: "";
+          display: block;
+          width: 220px;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, var(--green), var(--violet), transparent);
+          transform: translateX(860px);
+          animation: transmit 4.8s ease-in-out 1;
+        }
+
+        @keyframes transmit {
+          from { transform: translateX(-220px); }
+          to   { transform: translateX(860px); }
+        }
+
+        @keyframes illuminate {
+          0%, 100% { opacity: 1; }
+          40% { opacity: .45; }
+          70% { opacity: 1; box-shadow: 0 0 32px #b1f18444; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .frame-one, .signal::after { animation: none; }
+        }
+      </style>
+
+      <h1 class="name">ELIAS ETL</h1>
+      <div class="signature">CODE / LIGHT / SOUND</div>
+
+      <div class="sculpture" aria-hidden="true">
+        <div class="frame frame-one"></div>
+        <div class="frame frame-two"></div>
+        <div class="frame frame-three"></div>
+      </div>
+
+      <div class="signal" aria-hidden="true"></div>
+    </div>
+  </foreignObject>
+</svg>
